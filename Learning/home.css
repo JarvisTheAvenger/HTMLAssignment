@@ -1,0 +1,112 @@
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Helvetica-Neue', sans-serif;
+    background-color:lightgray;
+  }
+
+  .hospitalTitle {
+    font-size: larger;
+    color: black;
+    text-decoration: none;
+  }
+  
+  #hospitalsList {
+    height: 85vh;
+  }
+  
+  .hospitalName {
+    margin: 2vh;
+    width: fit-content; 
+  }
+
+  .hospitalName:active {
+    cursor: grabbing;
+  }
+  
+  footer {
+    background-color: white;
+    color: black;
+  }
+
+  .navbar {
+    border-bottom: 1px rgb(214, 212, 212) solid;
+    padding-right: 2%;
+  }
+
+  .drugSelected {
+    height: 84.2vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  
+  
+  #drugTitle {
+    padding: 2% 2% 1% 3%;
+    font-size: x-large;
+    font-weight: bolder;
+    color: #0b1a38;
+  }
+
+.navbar-light .navbar-toggler {
+      border: 0;
+    } 
+   
+  main {
+    margin-top: 5vh;
+  }
+  
+  .leftNav {
+    height: 84.2vh;
+    width: 100vw;
+    background-color: rgb(80, 66, 92);
+  }
+  
+  #clinicalStudyList {
+    height: 92%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .studyTitle {
+    color: rgb(243, 252, 252);
+    font-weight: 200;
+    transition: transform 0.5s ease-in-out;
+  }
+  .studyTitle:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+    cursor: pointer;
+    color: rgb(119, 223, 214);
+    transform: scale(1.1);
+  }
+    
+  .mainContainer {
+    padding-left: 2%;
+  }
+  
+  .countryName {
+    font-size: larger;
+    font-weight: 300;
+    color: #0b1a38;
+  }
+  
+  .countryName:not(:first-child) {
+    margin-top: 7%;
+  }
+  
+  .dropBox {
+    width: 30vw;
+    height: 24vh;
+    border: 1px solid black;
+    overflow: scroll;
+    margin-bottom: 4%;
+  }
+  
+ 
+ 
+
+
