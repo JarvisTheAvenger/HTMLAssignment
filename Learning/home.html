@@ -27,15 +27,15 @@
 
     <main class='container-fluid'>
       <div class='row'>
-        <section class='col-sm-3 leftNav'>
+        <section class='leftNav'>
           <section id='clinicalStudyList'></section>
         </section> 
 
         <article class='drugSelected col-sm-9'>
           <div id='drugTitle'></div>
           <div class='row mainContainer'>
-            <div class='col-sm-6 dropBoxes' id='countriesList'></div>
-            <div class='col-sm-6'>
+            <div class='col-sm-6 card' id='countriesList'></div>
+            <div class='col-sm-3 card'>
               <div class='hospitalTitle'>Drag the hospitals</div>
               <div id='hospitalsList' ondrop=drop(event) ondragover=allowDrop(event)></div>
             </div> 

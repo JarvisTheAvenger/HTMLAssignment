@@ -1,6 +1,22 @@
-var studies = {study1:'Study1', study2:'Study2'}
-var countries = {ind:'India', fra:'France'}
-var hospitals = {hosp1:'hospital1', hosp2:'hospital2', hosp3:'hospital3', hosp4:'hospital4', hosp5:'hospital5', hosp6:'hospital6', hosp7:'hospital7'}
+var studies = {
+  study1:'Study1',
+   study2:'Study2'
+}
+
+var countries = {
+  india:'India', 
+  france:'France'
+}
+
+var hospitals = {
+  hosp1:'hospital1',
+  hosp2:'hospital2',
+  hosp3:'hospital3', 
+  hosp4:'hospital4',
+  hosp5:'hospital5', 
+  hosp6:'hospital6', 
+  hosp7:'hospital7'
+}
 
 var currentStudy = ''
 var newList = {}
@@ -9,6 +25,9 @@ function drop(event) {
   event.preventDefault()
 
   var data = event.dataTransfer.getData("text")
+  
+  console.log(data)
+
   event.target.appendChild(document.getElementById(data))
   newList[currentStudy]['unTaggedHospitals'] = [...document.querySelectorAll('#hospitalsList > div')].map(({ id }) => id)
 
@@ -53,7 +72,6 @@ function showStudies(name = 'study1') {
   document.getElementById(currentStudy).classList.add('studySelected')
 
   createCountries()
-  createHospitalList()
 }
 
 function createCountries() {
@@ -63,11 +81,13 @@ function createCountries() {
   for (let i in countries) {
     document.getElementById('countriesList').innerHTML += "<div class='countryName'>" +countries[i]+ "</div>"
     + "<div ondrop='drop(event)' ondragover='allowDrop(event)' class='dropBox' id='" +i+ "'></div>"
+
     for(let hospital of newList[currentStudy][i]) {
       document.getElementById(i).innerHTML += "<div class='hospitalName' draggable='true' ondragstart='drag(event)' id='" +hospital+"'>" +hospitals[hospital]+ "</div>"
     }
   }
   
+  createHospitalList()
 }
 
 function createHospitalList() {
@@ -76,7 +96,6 @@ function createHospitalList() {
     document.getElementById('hospitalsList').innerHTML += "<div class='hospitalName' draggable='true' ondragstart='drag(event)' id='" +i+"'>" +hospitals[i]+ "</div>"
   }
 }
-
 
 // var hospitals = ["Columbia Asia","Sahyadri hospital","Ruby clinic","Imax hospital","Jehangir hospital","Sassoon hospital","Sancheti hospital"]
 
